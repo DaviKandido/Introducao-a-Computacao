@@ -1,0 +1,120 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+
+\usepackage{graphicx,url}
+
+%\usepackage[brazil]{babel}   
+\usepackage[utf8]{inputenc}  
+
+     
+\sloppy
+
+\title{Reumo do artigo: "Otimização e Atualização do Sistema de Máquinas Virtuais do CTISM"\\\\ }
+
+\author{Augusto S. Duarte\inst{1}, Alexandre Duarte\inst{2}, Davi C. de Almeida\inst{3}, Gabriel Anderson C. \\Da Silva\inst{4} }
+
+
+\address{Instituto de Ciências Exatas e Informática
+ -- Pontifícia Universidade Católica de Minas Gerais\\
+  (PUC - Minas)
+  \\Caixa Postal, 1.686. Minas Gerais - Brasil
+\nextinstitute
+  Artigo escrito por: \\
+  Maciel Berlezi , Tiago A. Rizzetti \\
+  Data: 2023
+\nextinstitute
+  Publicado por/em: Escola regional de redes de computação
+\\Colégio Técnico Industrial de Santa Maria\\
+  Universidade Federal de Santa Maria (UFSM)
+  \email{davicandidopucminas@gmail.com, asduarte@sga.pucminas.br}
+  \email{advgraaf@sga.pucminas.br, gabriel1234000000@gmail.com}
+}
+
+\begin{document} 
+
+\maketitle
+
+\begin{abstract}
+The work read presents a virtualization solution for teaching laboratories, seeking to improve efficiency and safety in practical educational activities. However, it faced performance and security problems. The author brought as a solution the migration to a new server, more robust and with the most up-to-date tools. The new system had new features such as choosing the operating system, time limits for idle machines and personalization of usernames and passwords. Concluding that the changes optimized the CTISM virtual environment, making it more efficient, safe and friendly for users, which benefited educational activities.
+\end{abstract}
+     
+\begin{resumo} 
+O trabalho lido apresenta uma solução de virtualização para laboratórios didáticos, buscando aprimorar a eficiência e segurança nas atividades práticas educacionais. Porém enfrentava problemas de desempenho e segurança. O autor trouxe como solução, a migração para um novo servidor, mais robusto e com as ferramentas mais atualizadas. O novo sistema contou com novas funcionalidades como a escolha do sistema operacional, limites de tempo para máquinas ociosas e personalização de nomes de usuário e senhas. Concluindo então que as mudanças otimizaram o ambiente virtual do CTISM, tornando-o mais eficiente, seguro e amigável para os usuários, o que beneficiou as atividades educacionais.
+\end{resumo}
+
+\pagebreak
+\section{Motivação para o desenvolvimento do trabalho de pesquisa descrito no artigo:}
+
+Apresentar uma solução de virtualização para laboratórios didáticos, visando aprimorar a eficiência e segurança nas atividades práticas educacionais.
+
+\section{Problema científico apontado pelos autores:} \label{sec:firstpage}
+
+O sistema utilizado nos laboratórios do CTISM utilizava tecnologias de contêineres, como o LXC/LXD, no entanto o sistema anterior se encontrava desatualizado, portanto enfrentava problemas de desempenho e segurança devido justamente a falta de atualizações frequentes.
+
+\section{Objetivos do trabalho de pesquisa:}
+
+
+O objetivo da pesquisa é  otimizar a infraestrutura de TI de um ambiente educacional, promovendo, assim, uma melhoria na eficiência, flexibilidade e qualidade da experiência do usuário, voltado especificamente para o público técnico-científico. Tais avanços serão promovidos por meio da virtualização das máquinas.
+
+
+\section{Metodologia utilizada pelos autores:}
+
+Primeiramente se analisou o sistema de máquinas virtuais do CTISM, identificando seus pontos fortes, bem como suas limitações, o processo envolveu a atualização do LXC e LXD, migrando páginas Web do sistema legado (Sistemas legados são plataformas ou softwares que estão ultrapassados), o que ofereceu aos usuários a capacidade de escolher o sistema operacional a ser utilizado, definiu tempo máximo de funcionamento para máquinas que não estão em uso, e tornou possível a personalização de nomes de usuários e senhas, propondo também um balanceamento de carga entre os servidores do sistema.
+A fim de melhorar o sistema iniciou-se o desenvolvimento do VMSv3 que serviu de substituição do sistema anterior, VMSv2, permitindo uma configuração mais robusta,  o que lhes gerou um ganho de 1TB de armazenamento e 16GB de memória RAM, no entanto para esse processo foi necessário a alteração do código de interface Web do sistema.
+
+
+\subsection{Principais resultados encontrados: }
+
+
+Como resultado, a nova versão VSMv3 apresentou uma melhora significativa na velocidade de criação das máquinas virtuais em cada sistema, comparado a sua versão anterior, foram 20 segundos a menos para cada processo. Além disso, apresentou melhorias para o usuário, podendo personalizar sua máquina com um nome de usuário ,senha e sistema operacional específicos, diferente de antes, que tinha que ser o padrão do Ubuntu 20.04 LTS.
+
+
+\section{Contribuições e conclusões do trabalho:}\label{sec:figs}
+
+
+
+Em suma, o trabalho resultou em um avanço na qualidade dos sistemas de máquinas virtuais, uma vez que aumentou sua eficiência, otimização e sua personalização.
+\\
+
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.7\textwidth]{Fig1.png}
+\caption{Grafico de desempenho na inicialização de novas maquinas \cite{boulic:91}}
+\label{fig:exampleFig1}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.7\textwidth]{Fig2.png}
+\caption{Interface Web VMSv3 vs VMSv2 \cite{boulic:91}}
+\label{sec: Fig2}
+\end{figure}
+
+
+
+\section{Nossa análise sobre o artigo:}
+
+O artigo em questão é de suma utilidade para diversos sistemas educacionais, mesmo trazendo pequenas mudanças em relação à versão anterior(VMSv2). Portanto, mesmo não sendo um projeto muito inovador, ele tem um grande apelo quanto ao aumento da eficiência, realizado por meio de um aprimoramento de hardware e software.
+ 
+
+\bibliographystyle{sbc}
+\bibliography{sbc-template}
+
+\end{document}
